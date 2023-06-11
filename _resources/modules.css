@@ -1,0 +1,9 @@
+.navigation_bar {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+.navigation_bar__link {
+    margin-right: 1rem;
+}

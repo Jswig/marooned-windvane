@@ -1,10 +1,9 @@
-module Page exposing (footer, header, layout, main, markdown)
+module Page exposing (footer, navigationBar, layout, main, markdown)
 
 import Elmstatic exposing (..)
 import Html exposing (..)
-import Html.Attributes as Attr exposing (alt, attribute, class, href, src)
+import Html.Attributes as Attributes exposing (alt, attribute, class, href, src)
 import Markdown
-import Styles
 
 
 githubIcon : Html Never
@@ -21,22 +20,6 @@ M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.3
     in
     Html.node "svg" [ attribute "width" "16", attribute "height" "16", attribute "viewBox" "0 0 16 16" ] [ pathNode ]
 
-
-twitterIcon : Html Never
-twitterIcon =
-    let
-        pathNode =
-            Html.node "path"
-                [ attribute "fill" "#fff"
-                , attribute "d" """
-M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809 c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z
-            """
-                ]
-                []
-    in
-    Html.node "svg" [ attribute "width" "16", attribute "height" "16", attribute "viewBox" "0 0 16 16" ] [ pathNode ]
-
-
 markdown : String -> Html Never
 markdown s =
     let
@@ -51,75 +34,46 @@ markdown s =
     Markdown.toHtmlWith mdOptions [ attribute "class" "markdown" ] s
 
 
-header : List (Html Never)
+navigationBarLink : String -> String -> Html msg
+navigationBarLink path label =
+    Html.a [ Attributes.href path, Attributes.class "navigation_bar__link" ] [ Html.text label ]
+
+
+navigationBar : Html Never
+navigationBar =
+    Html.div [ Attributes.class "navigation_bar" ]
+        [ navigationBarLink "/posts" "Posts"
+        , navigationBarLink "/about_me" "About me"
+        ]
+
+
+header : Html Never
 header =
-    [ div [ class "header-logo" ]
-        [ img [ alt "Author's blog", src "/img/logo.png", attribute "width" "100" ]
-            []
-        ]
-    , div [ class "navigation" ]
-        [ ul []
-            [ li []
-                [ a [ href "/posts" ]
-                    [ text "Posts" ]
-                ]
-            , li []
-                [ a [ href "/about" ]
-                    [ text "About" ]
-                ]
-            , li []
-                [ a [ href "/contact" ]
-                    [ text "Contact" ]
-                ]
-            ]
-        ]
-    ]
+    Html.header [ Attributes.id "page-header" ] [ navigationBar ]
+
 
 
 footer : Html Never
 footer =
-    div [ class "footer" ]
-        [ img
-            [ alt "Author's blog"
-            , src "/img/logo.png"
-            , attribute "style" "float: left; padding-top: 7px"
-            , attribute "width" "75"
-            ]
-            []
-        , div [ class "link" ]
-            [ githubIcon
-            , a [ href "https://github.com" ]
-                [ text "Author's GitHub" ]
-            ]
-        , div [ class "link" ]
-            [ twitterIcon
-            , a [ href "https://twitter.com" ]
-                [ text "Author's Twitter" ]
-            ]
-        , div [ class "link" ]
-            [ a [ href "https://www.npmjs.com/package/elmstatic" ]
-                [ text "Created with Elmstatic" ]
-            ]
+    Html.footer [ Attributes.id "page-footer" ]
+        [ Html.text ("© 2023 Anders Poirel")
+        , Html.a [ Attributes.href "/about_this_site" ] [ Html.text "about this site" ]
         ]
 
 
-layout : String -> List (Html Never) -> List (Html Never)
-layout title contentItems =
-    header
-        ++ [ div [ class "sidebar" ]
-                []
-           , div [ class "sidebar2" ]
-                []
-           , div [ class "content" ]
-                ([ h1 [] [ text title ] ] ++ contentItems)
-           , footer
-           , Elmstatic.stylesheet "/styles.css"
-           , Styles.styles
-           ]
+layout : List (Html Never) -> List (Html Never)
+layout contentItems =
+    [ header
+    , Html.div [ Attributes.id "page-content" ] 
+        [ Html.div [ Attributes.id "page-content-main"] contentItems 
+        ]
+    , footer 
+    , Elmstatic.stylesheet "/styles.css"
+    ]
 
 
 main : Elmstatic.Layout
 main =
     Elmstatic.layout Elmstatic.decodePage <|
         \content ->
-            Ok <| layout content.title [ markdown content.content ]
+            Ok <| layout [ markdown content.content ]

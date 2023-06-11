@@ -1,0 +1,30 @@
+body {
+    /* forces content to fill entire page vertically.
+     * Since we're adding margin around this on both the top and the bottom of this
+     * container, substract it so that the added margin doesn't create a scrollbar 
+    */
+    min-height: calc(100vh - 2*var(--toplevel-margin));
+    display: flex;
+    flex-direction: column;
+    margin: var(--toplevel-margin);
+}
+
+#page-header {
+    
+}
+
+#page-content {
+    flex: 1; /* expand to fill body-content */
+    display: flex;
+    justify-content: center;
+}
+
+#page-content-main {
+    max-width: 88ch;
+}
+
+#page-footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
