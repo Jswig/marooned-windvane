@@ -1,9 +1,6 @@
 {
     "siteTitle": "Anders Poirel",
     "outputDir": "_site",
-    "copy": {
-        "/posts": "/"
-    },
     "feed": {
         "type": "rss",
         "title": "Anders Poirel",

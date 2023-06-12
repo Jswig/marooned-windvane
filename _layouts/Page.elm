@@ -44,7 +44,7 @@ navigationBar : Html Never
 navigationBar =
     Html.div [ Attributes.class "navigation_bar" ]
         [ navigationBarLink "/posts" "posts"
-        , navigationBarLink "/about_me" "about me"
+        , navigationBarLink "/" "about me"
         , navigationBarLink "/anders_poirel_resume.pdf" "resume"
         ]
 

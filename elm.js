@@ -4958,6 +4958,7 @@ var $author$project$Elmstatic$decodePostList = A5(
 	A2($elm$json$Json$Decode$field, 'siteTitle', $elm$json$Json$Decode$string),
 	A2($elm$json$Json$Decode$field, 'title', $elm$json$Json$Decode$string));
 var $elm$html$Html$div = _VirtualDom_node('div');
+var $elm$html$Html$h1 = _VirtualDom_node('h1');
 var $elm$html$Html$h2 = _VirtualDom_node('h2');
 var $elm$json$Json$Encode$string = _Json_wrap;
 var $elm$html$Html$Attributes$stringProperty = F2(
@@ -5516,7 +5517,7 @@ var $author$project$Page$navigationBar = A2(
 	_List_fromArray(
 		[
 			A2($author$project$Page$navigationBarLink, '/posts', 'posts'),
-			A2($author$project$Page$navigationBarLink, '/about_me', 'about me'),
+			A2($author$project$Page$navigationBarLink, '/', 'about me'),
 			A2($author$project$Page$navigationBarLink, '/anders_poirel_resume.pdf', 'resume')
 		]));
 var $author$project$Page$header = A2(
@@ -5645,8 +5646,26 @@ var $author$project$Posts$main = function () {
 	var postListContent = function (posts) {
 		return $elm$core$List$isEmpty(posts) ? _List_fromArray(
 			[
+				A2(
+				$elm$html$Html$h1,
+				_List_Nil,
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Posts')
+					])),
 				$elm$html$Html$text('No posts yet!')
-			]) : A2($elm$core$List$map, postItem, posts);
+			]) : _Utils_ap(
+			_List_fromArray(
+				[
+					A2(
+					$elm$html$Html$h1,
+					_List_Nil,
+					_List_fromArray(
+						[
+							$elm$html$Html$text('Posts')
+						]))
+				]),
+			A2($elm$core$List$map, postItem, posts));
 	};
 	return A2(
 		$author$project$Elmstatic$layout,
@@ -5659,6 +5678,17 @@ var $author$project$Posts$main = function () {
 		});
 }();
 var $author$project$Tag$main = $author$project$Posts$main;
+var $author$project$Elmstatic$Page = F4(
+	function (content, format, siteTitle, title) {
+		return {O: content, S: format, E: siteTitle, x: title};
+	});
+var $author$project$Elmstatic$decodePage = A5(
+	$elm$json$Json$Decode$map4,
+	$author$project$Elmstatic$Page,
+	$author$project$Elmstatic$decodeContent,
+	$author$project$Elmstatic$decodeFormat,
+	A2($elm$json$Json$Decode$field, 'siteTitle', $elm$json$Json$Decode$string),
+	A2($elm$json$Json$Decode$field, 'title', $elm$json$Json$Decode$string));
 var $elm$core$Maybe$isJust = function (maybe) {
 	if (!maybe.$) {
 		return true;
@@ -5684,29 +5714,6 @@ var $author$project$Page$markdown = function (s) {
 			]),
 		s);
 };
-var $author$project$Post$main = A2(
-	$author$project$Elmstatic$layout,
-	$author$project$Elmstatic$decodePost,
-	function (content) {
-		return $elm$core$Result$Ok(
-			$author$project$Page$layout(
-				_List_fromArray(
-					[
-						$author$project$Post$metadataHtml(content),
-						$author$project$Page$markdown(content.O)
-					])));
-	});
-var $author$project$Elmstatic$Page = F4(
-	function (content, format, siteTitle, title) {
-		return {O: content, S: format, E: siteTitle, x: title};
-	});
-var $author$project$Elmstatic$decodePage = A5(
-	$elm$json$Json$Decode$map4,
-	$author$project$Elmstatic$Page,
-	$author$project$Elmstatic$decodeContent,
-	$author$project$Elmstatic$decodeFormat,
-	A2($elm$json$Json$Decode$field, 'siteTitle', $elm$json$Json$Decode$string),
-	A2($elm$json$Json$Decode$field, 'title', $elm$json$Json$Decode$string));
 var $author$project$Page$main = A2(
 	$author$project$Elmstatic$layout,
 	$author$project$Elmstatic$decodePage,
@@ -5718,4 +5725,4 @@ var $author$project$Page$main = A2(
 						$author$project$Page$markdown(content.O)
 					])));
 	});
-_Platform_export({'Page':{'init':$author$project$Page$main($elm$json$Json$Decode$value)(0)},'Tag':{'init':$author$project$Tag$main($elm$json$Json$Decode$value)(0)},'Posts':{'init':$author$project$Posts$main($elm$json$Json$Decode$value)(0)},'Post':{'init':$author$project$Post$main($elm$json$Json$Decode$value)(0)}});}(this));
+_Platform_export({'Page':{'init':$author$project$Page$main($elm$json$Json$Decode$value)(0)},'Tag':{'init':$author$project$Tag$main($elm$json$Json$Decode$value)(0)},'Posts':{'init':$author$project$Posts$main($elm$json$Json$Decode$value)(0)}});}(this));

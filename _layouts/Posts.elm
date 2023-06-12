@@ -18,10 +18,12 @@ main =
 
         postListContent posts =
             if List.isEmpty posts then
-                [ Html.text "No posts yet!" ]
+                [ Html.h1 [] [ Html.text "Posts" ]
+                , Html.text "No posts yet!" 
+                ]
 
             else
-                List.map postItem posts
+                [ Html.h1 [] [ Html.text "Posts" ] ] ++ (List.map postItem posts )
 
         sortPosts posts =
             List.sortBy .date posts
