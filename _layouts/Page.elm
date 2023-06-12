@@ -58,7 +58,7 @@ footer : Html Never
 footer =
     Html.footer [ Attributes.id "page-footer" ]
         [ Html.text "© 2023 Anders Poirel"
-        , Html.a [ Attributes.href  "https://github.com/Jswig"] [ githubIcon ]
+        , Html.a [ Attributes.href "https://github.com/Jswig" ] [ githubIcon ]
         , Html.a [ Attributes.href "/about_this_site" ] [ Html.text "about this site" ]
         ]
 
