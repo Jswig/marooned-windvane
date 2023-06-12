@@ -1,2 +1,4 @@
-_site/*
 elm-stuff/*
+elm.js
+node_modules
+_site/*
