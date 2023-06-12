@@ -5515,7 +5515,6 @@ var $author$project$Page$navigationBar = A2(
 		]),
 	_List_fromArray(
 		[
-			A2($author$project$Page$navigationBarLink, '/home', 'home'),
 			A2($author$project$Page$navigationBarLink, '/posts', 'posts'),
 			A2($author$project$Page$navigationBarLink, '/about_me', 'about me'),
 			A2($author$project$Page$navigationBarLink, '/anders_poirel_resume.pdf', 'resume')

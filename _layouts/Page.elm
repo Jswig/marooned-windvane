@@ -43,8 +43,7 @@ navigationBarLink path label =
 navigationBar : Html Never
 navigationBar =
     Html.div [ Attributes.class "navigation_bar" ]
-        [ navigationBarLink "/home" "home"
-        , navigationBarLink "/posts" "posts"
+        [ navigationBarLink "/posts" "posts"
         , navigationBarLink "/about_me" "about me"
         , navigationBarLink "/anders_poirel_resume.pdf" "resume"
         ]
