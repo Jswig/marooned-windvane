@@ -1,5 +1,2 @@
-node_modules/
-elm-stuff/
-dist/
-.elm-pages/
-functions/render/elm-pages-cli.js
+_site/*
+elm-stuff/*

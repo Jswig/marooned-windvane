@@ -1,0 +1,26 @@
+html {
+    --background-color: #1c1e26 ;
+    --text-color: #e5e5e5;
+    --background-text-color: #b7b7b7; 
+    --toplevel-margin: 2rem;
+    
+    --link-color: #6BE4E6 ;
+    --font-size: 12px
+
+    font-size: var(--font-size);
+    font-family: monospace;  
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+a {
+    color: var(--link-color);
+}
+
+a:active {
+    color: var(--link-color)
+}
+
+p {
+    text-align: justify;
+}
