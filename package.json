@@ -1,0 +1,10 @@
+{
+  "name": "elmstatic-app",
+  "scripts": {
+    "build": "elmstatic build"
+  },
+  "dependencies": {
+    "elm": "^0.19.1-5",
+    "elmstatic": "^0.7.3"
+  }
+}
