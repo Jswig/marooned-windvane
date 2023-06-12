@@ -1,8 +1,8 @@
 module Post exposing (main, metadataHtml)
 
 import Elmstatic exposing (..)
-import Html exposing (..)
-import Html.Attributes as Attr exposing (alt, attribute, class, href, src)
+import Html exposing (Html)
+import Html.Attributes as Attributes
 import Page
 
 
@@ -13,19 +13,19 @@ tagsToHtml tags =
             "/tags/" ++ String.toLower tag
 
         linkify tag =
-            a [ href <| tagLink tag ] [ text tag ]
+            Html.a [ Attributes.href <| tagLink tag, Attributes.class "post_metadata__tags__tag" ]
+                [ Html.text tag ]
     in
     List.map linkify tags
 
 
 metadataHtml : Elmstatic.Post -> Html Never
 metadataHtml post =
-    div [ class "post-metadata" ]
-        ([ span [] [ text post.date ]
-         , span [] [ text "•" ]
-         ]
-            ++ tagsToHtml post.tags
-        )
+    Html.div [ Attributes.class "post_metadata" ]
+        [ Html.span [] [ Html.text post.date ]
+        , Html.span [] [ Html.text "•" ]
+        , Html.span [ Attributes.class "post_metadata__tags" ] (tagsToHtml post.tags)
+        ]
 
 
 main : Elmstatic.Layout
@@ -33,6 +33,4 @@ main =
     Elmstatic.layout Elmstatic.decodePost <|
         \content ->
             Ok <|
-                Page.layout
-                    content.title
-                    [ metadataHtml content, Page.markdown content.content ]
+                Page.layout [ metadataHtml content, Page.markdown content.content ]

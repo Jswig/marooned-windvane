@@ -1,5 +1,5 @@
 ---
-title: "About me"
+title: "about me"
 ---
 
 # about me

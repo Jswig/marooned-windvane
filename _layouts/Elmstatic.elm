@@ -132,20 +132,35 @@ stylesheet href =
     node "link" [ attribute "href" href, attribute "rel" "stylesheet", attribute "type" "text/css" ] []
 
 
+highlightJsConfig : List (Html Never)
+highlightJsConfig =
+    let
+        highlightJsTheme =
+            "/github-dark.min.css"
+    in
+    [ script "//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"
+    , script "//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/elm.min.js"
+    , inlineScript "hljs.initHighlightingOnLoad();"
+    , stylesheet ("//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles" ++ highlightJsTheme)
+    ]
+
+
 htmlTemplate : String -> List (Html Never) -> Html Never
 htmlTemplate title contentNodes =
+    let
+        fontFamily =
+            "PT+Mono"
+    in
     node "html"
         []
         [ node "head"
             []
-            [ node "title" [] [ text title ]
-            , node "meta" [ attribute "charset" "utf-8" ] []
-            , script "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.1/highlight.min.js"
-            , script "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.1/languages/elm.min.js"
-            , inlineScript "hljs.initHighlightingOnLoad();"
-            , stylesheet "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.1/styles/default.min.css"
-            , stylesheet "//fonts.googleapis.com/css?family=Open+Sans|Proza+Libre|Inconsolata"
-            ]
+            ([ node "title" [] [ text title ]
+             , node "meta" [ attribute "charset" "utf-8" ] []
+             , stylesheet ("//fonts.googleapis.com/css?family=" ++ fontFamily)
+             ]
+                ++ highlightJsConfig
+            )
         , node "body" [] contentNodes
         ]
 

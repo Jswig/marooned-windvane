@@ -1,4 +1,4 @@
-module Page exposing (footer, navigationBar, layout, main, markdown)
+module Page exposing (footer, layout, main, markdown, navigationBar)
 
 import Elmstatic exposing (..)
 import Html exposing (..)
@@ -19,6 +19,7 @@ M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.3
                 []
     in
     Html.node "svg" [ attribute "width" "16", attribute "height" "16", attribute "viewBox" "0 0 16 16" ] [ pathNode ]
+
 
 markdown : String -> Html Never
 markdown s =
@@ -42,8 +43,10 @@ navigationBarLink path label =
 navigationBar : Html Never
 navigationBar =
     Html.div [ Attributes.class "navigation_bar" ]
-        [ navigationBarLink "/posts" "Posts"
-        , navigationBarLink "/about_me" "About me"
+        [ navigationBarLink "/home" "home"
+        , navigationBarLink "/posts" "posts"
+        , navigationBarLink "/about_me" "about me"
+        , navigationBarLink "/anders_poirel_resume.pdf" "resume"
         ]
 
 
@@ -52,11 +55,10 @@ header =
     Html.header [ Attributes.id "page-header" ] [ navigationBar ]
 
 
-
 footer : Html Never
 footer =
     Html.footer [ Attributes.id "page-footer" ]
-        [ Html.text ("© 2023 Anders Poirel")
+        [ Html.text "© 2023 Anders Poirel"
         , Html.a [ Attributes.href "/about_this_site" ] [ Html.text "about this site" ]
         ]
 
@@ -64,10 +66,10 @@ footer =
 layout : List (Html Never) -> List (Html Never)
 layout contentItems =
     [ header
-    , Html.div [ Attributes.id "page-content" ] 
-        [ Html.div [ Attributes.id "page-content-main"] contentItems 
+    , Html.div [ Attributes.id "page-content" ]
+        [ Html.div [ Attributes.id "page-content-main" ] contentItems
         ]
-    , footer 
+    , footer
     , Elmstatic.stylesheet "/styles.css"
     ]
 

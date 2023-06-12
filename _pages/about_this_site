@@ -1,9 +1,0 @@
----
-title: "About this site"
----
-
-# about this site
-
-This website is written in [elm](https://elm-lang.org/), a purely functional language 
-for front-end web development. It uses the [elmstatic](https://korban.net/elm/elmstatic/) framework
-for generating static content.

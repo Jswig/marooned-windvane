@@ -1,22 +1,21 @@
 {
-    "siteTitle": "Author's fancy blog",
+    "siteTitle": "Anders Poirel",
     "outputDir": "_site",
     "copy": {
         "/posts": "/"
     },
     "feed": {
         "type": "rss",
-        "title": "Author's fancy blog",
-        "description": "Author's blog posts",
-        "id": "https://example.com",
-        "link": "https://example.com/posts",
-        "image": "https://example.com/img/logo.png",
-        "copyright": "Copyright: Author",
+        "title": "Anders Poirel",
+        "description": "Anders Poirel's blog posts",
+        "id": "https://anderspoirel.me",
+        "link": "https://anderspoirel.me/posts",
+        "copyright": "Copyright: Anders Poirel",
         "language": "en",
         "generator": "Elmstatic",
         "author": {
-          "name": "Author",
-          "link": "https://example.com/about"
+          "name": "Anders Poirel",
+          "link": "https://anderspoirel.me/about_me"
         }
     },
     "tags": ["other", "software"]
