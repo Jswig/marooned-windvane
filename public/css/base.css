@@ -20,7 +20,3 @@ a {
 a:active {
     color: var(--link-color)
 }
-
-p {
-    text-align: justify;
-}

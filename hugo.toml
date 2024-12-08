@@ -1,0 +1,7 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Anders Poirel'
+
+
+[params]
+    homeText = "Blog template"

@@ -8,23 +8,3 @@ body {
     flex-direction: column;
     margin: var(--toplevel-margin);
 }
-
-#page-header {
-    
-}
-
-#page-content {
-    flex: 1; /* expand to fill body-content */
-    display: flex;
-    justify-content: center;
-}
-
-#page-content-main {
-    max-width: 88ch;
-}
-
-#page-footer {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-}
