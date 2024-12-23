@@ -2,6 +2,8 @@ baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'Anders Poirel'
 
+[permalinks]
+    blog = ":/filename/"
 
 [params]
     homeText = "Blog template"
