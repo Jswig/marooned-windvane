@@ -8,3 +8,19 @@ body {
     flex-direction: column;
     margin: var(--toplevel-margin);
 }
+
+main {
+    flex: 1; /* expand to fill body */
+    display: flex;
+    justify-content: center;
+}
+
+main.content {
+    max-width: 88ch;
+}
+
+footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}

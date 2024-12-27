@@ -9,19 +9,19 @@
   </head>
   <body>
     <header>
-      <nav id="nav">
+      <nav>
         {{ range .Site.Menus.main }}
         <a href="{{ .URL }}">{{ .Name | safeHTML }}</a>
         {{ end }}
         </nav>
     </header>
-    <div class="container">
-      <main id="main">
-       {{ block "main" . }}{{ end }}
-      </main>
-    </div>
+    <main>
+      <div class="content">
+      {{ block "main" . }}{{ end }}
+      </div>
+    </main>
     <footer>
-      {{ with .Site.GetPage "About this site" "about-this-site.md" }}
+      {{ with .Site.GetPage "about-this-site.md" }}
       <a href="{{ .Permalink }}">about this site</a>
       {{ end }}
     </footer>
