@@ -1,1 +1,0 @@
-This was developed with [Hugo](https://gohugo.io/). Hosting is provided by Cloudflare Pages.
