@@ -1,4 +1,71 @@
 @import "normalize.css";
-@import "base.css";
-@import "layout.css";
-@import "modules.css";
+
+html {
+    --background-color: #1c1e26 ;
+    --text-color: #e5e5e5;
+    --background-text-color: #b7b7b7; 
+    --toplevel-margin: 2rem;
+    --link-color: #6BE4E6 ;
+    --font-size: 8px
+
+    font-size: var(--font-size);
+    font-family: Consolas, Menlo, "Ubuntu Mono", monospace;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+body {
+    /* forces content to fill entire page vertically.
+     * Since we're adding margin around this on both the top and the bottom of this
+     * container, substract it so that the added margin doesn't create a scrollbar 
+    */
+    min-height: calc(100vh - 2*var(--toplevel-margin));
+    display: flex;
+    flex-direction: column;
+    margin: var(--toplevel-margin);
+}
+
+main {
+    flex: 1; /* expand to fill body */
+    display: flex;
+    justify-content: center;
+}
+
+main .content {
+    max-width: 88ch;
+}
+
+footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+
+a {
+    color: var(--link-color);
+}
+
+a:active {
+    color: var(--link-color)
+}
+
+.page_title {
+    color: var(--text-color);
+}
+
+h1 {
+    color: #b7b7b7
+}
+
+h2 {
+    color: #9d9d9d
+}
+
+main :is(h1, h2, h3, h4, h5, h6) {
+    line-height: 1.2;
+}
+
+main :is(p, li) {
+    line-height: 1.4;
+}
