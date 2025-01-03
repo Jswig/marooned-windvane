@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {{ $css := "css/styles.css" | relURL }}
     <link rel="stylesheet" href="{{ $css }}">
-    <title>{{ .Title }}</title>
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
   </head>
   <body>
     <header>
@@ -24,7 +24,7 @@
       {{ with .Site.GetPage "about-this-site.md" }}
       <a href="{{ .Permalink }}">🌐 about this site</a>
       {{ end }}
-      <span>📧 <b>contact[at]anderspoirel.net</b></span>
+      <span>📧 contact[at]anderspoirel.net</span>
     </footer>
   </body>
 </html>
