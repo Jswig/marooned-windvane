@@ -1,6 +1,7 @@
 {{ define "main" }}
 
-<h1 class="page_title">{{ upper .Title }}</h1>
+<h1 class="page_title">{{ lower .Title }}</h1>
+
 {{ .Content }}
 
 {{ end }}

@@ -1,9 +1,11 @@
 {{ define "main" }}
 
-<h1>{{ .Title }}</h1>
+<h1 class="page_title">{{ lower .Title }}</h1>
+
 {{ range .Pages.ByPublishDate.Reverse }}
 <p>
-  <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+  {{ partial "date.html" . }}
+  <a href="{{ .RelPermalink }}">{{ lower .Title }}</a>
 </p>
 {{ end }}
 

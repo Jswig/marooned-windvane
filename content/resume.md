@@ -18,23 +18,6 @@ title: "Resume"
 
 **data scientist intern**, [Startup Genome](https://startupgenome.com/) *(Apr. 2020 - Jun. 2020)*
 
-# skills
-
-## programming languages
-
-- **fluent**: Python, SQL, Go
-- **some experience**: Scala, Javascript, CSS
-
-## frameworks & libraries
-
-- **fluent**: PySpark, Pandas, Numpy/Scipy, Dash/Plotly
-- **some experience**: FastAPI, PyTorch, React
-
-## tools & platforms
-
-- **fluent**: Apache Spark, Docker, Kubernetes, Databricks, Terraform, Grafana, Make
-- **some experience**: PostgreSQL, Apache Kafka, AWS (S3, SQS)
-
 # education
 
 **University of California, Santa Cruz** *(2017 - 2021)*

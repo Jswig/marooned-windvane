@@ -2,8 +2,20 @@ baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'Anders Poirel'
 
-[params]
-    homeText = "Blog template"
-
-[taxonomies]
-    tags = "tags"
+[menu]
+  [[menu.main]]
+    name = "~/"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "writing"
+    url = "/writing/"
+    weight = 2
+  [[menu.main]]
+    name = "resume"
+    url = "/resume/"
+    weight = 3
+  [[menu.main]]
+    name = "contact"
+    url = "/contact/"
+    weight = 4
