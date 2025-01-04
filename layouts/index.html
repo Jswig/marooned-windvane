@@ -6,8 +6,7 @@
 
 {{ range first 5 (where .Site.RegularPages.ByPublishDate.Reverse "Type" "writing" ) }}
 <p>
-  {{ partial "date.html" . }}
-  <a href="{{ .RelPermalink }}">{{ lower .Title }}</a>
+  {{ partial "list-item.html" . }}
 </p>
 {{ end }}
 

@@ -7,24 +7,23 @@
     <link rel="stylesheet" href="{{ $css }}">
     <title>{{ .Title }} - {{ .Site.Title }}</title>
   </head>
-  <body>
-    <header>
+  <body id="page-body">
+    <header id="page-header">
       <nav>
         {{ range .Site.Menus.main }}
         <a href="{{ .URL }}">{{ .Name | safeHTML }}</a>
         {{ end }}
       </nav>
     </header>
-    <main>
-      <div class="content">
+    <main id="page-main">
+      <div id="page-content">
         {{ block "main" . }}{{ end }}
       </div>
     </main>
-    <footer>
+    <footer id="page-footer">
       {{ with .Site.GetPage "about-this-site.md" }}
       <a href="{{ .Permalink }}">🌐 about this site</a>
       {{ end }}
-      <span>📧 contact[at]anderspoirel.net</span>
     </footer>
   </body>
 </html>
