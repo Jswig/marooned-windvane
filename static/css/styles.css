@@ -32,6 +32,10 @@ a:active {
     color: var(--button-color)
 }
 
+hr {
+    color: var(--background-text-color);
+}
+
 h1 {
     color: #b7b7b7
 }
