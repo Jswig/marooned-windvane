@@ -23,6 +23,7 @@ Links are not endorsements of every single viewpoint espoused in the following e
 
 - [colah's blog](https://colah.github.io/)
 - [Cosma's home page](http://bactra.org/)
+- [Entropic Thoughts](https://entropicthoughts.com/index)
 - [Gregory Gundersen](https://gregorygundersen.com/blog/)
 - [Statistical Modeling, Causal Inference, and Social Science](https://statmodeling.stat.columbia.edu/)
 - [Nick Higham](https://nhigham.com/blog/)
