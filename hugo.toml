@@ -1,0 +1,21 @@
+baseURL = 'https://anderspoirel.net/'
+languageCode = 'en-us'
+title = 'Anders Poirel'
+
+[menu]
+  [[menu.main]]
+    name = "anderspoirel.net"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "writing"
+    url = "/writing/"
+    weight = 2
+  [[menu.main]]
+    name = "resume"
+    url = "/resume/"
+    weight = 3
+  [[menu.main]]
+    name = "contact"
+    url = "/contact/"
+    weight = 4
