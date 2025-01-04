@@ -19,3 +19,9 @@ title = 'Anders Poirel'
     name = "contact"
     url = "/contact/"
     weight = 4
+
+
+[markup]
+  [markup.highlight]
+    style = "swapoff"
+    noClasses = false

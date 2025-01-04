@@ -1,13 +1,14 @@
 @import "normalize.css";
+@import "syntax.css";
 
 html {
-    --background-color: #1c1e26 ;
+    --background-color: #1c1e26;
     --text-color: #e5e5e5;
-    --background-text-color: #b7b7b7; 
+    --background-text-color: #b7b7b7;
     --toplevel-margin: 2rem;
     --button-color: #6BE4E6;
     --button-highlight-color: #51aaac;
-    --font-size: 15px;
+    --font-size: 16px;
     --border-radius: 2px;
 
     font-size: var(--font-size);
@@ -19,7 +20,7 @@ html {
 a {
     color: var(--button-color);
     text-decoration: none;
-    padding: 2px;
+    padding: 1px;
 }
 
 a:hover {
@@ -40,6 +41,13 @@ h1 {
     color: #b7b7b7
 }
 
+pre {
+    border-radius: 4px;
+    overflow: scroll;
+    padding: 1rem;
+    width: max-content;
+}
+
 body {
     /* forces content to fill entire page vertically.
      * Since we're adding margin around this on both the top and the bottom of this
@@ -51,33 +59,34 @@ body {
     margin: var(--toplevel-margin);
 }
 
-header nav {
+#page-header nav {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
 }
 
-header nav a {
+#page-header nav a {
     margin-right: 1rem;
+    margin-bottom: 1rem;
 }
 
-main {
+#page-main {
     flex: 1; /* expand to fill body */
     display: flex;
     justify-content: center;
 }
 
-main .content {
+#page-content {
     width: 88ch;
 }
 
-footer {
+#page-footer {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
 }
 
-main :is(h1, h2, h3, h4, h5, h6) {
+h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
 }
 

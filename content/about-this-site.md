@@ -1,5 +1,5 @@
 ---
-title: "About this site"
+title: "about this site"
 ---
 
 This website is built with [Hugo](https://gohugo.io/) and a homegrown theme.
