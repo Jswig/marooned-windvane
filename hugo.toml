@@ -23,5 +23,4 @@ title = 'Anders Poirel'
 
 [markup]
   [markup.highlight]
-    style = "swapoff"
     noClasses = false

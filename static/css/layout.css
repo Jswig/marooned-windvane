@@ -1,0 +1,38 @@
+#page-body {
+    --toplevel-margin: 2rem;
+    /* forces content to fill entire page vertically.
+     * Since we're adding margin around this on both the top and the bottom of this
+     * container, substract it so that the added margin doesn't create a scrollbar 
+    */
+    min-height: calc(100vh - 2*var(--toplevel-margin));
+    display: flex;
+    flex-direction: column;
+    margin: var(--toplevel-margin);
+}
+
+#page-header nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+#page-header nav a {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+#page-main {
+    flex: 1; /* expand to fill body */
+    display: flex;
+    justify-content: center;
+}
+
+#page-content {
+    width: 88ch;
+}
+
+#page-footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}

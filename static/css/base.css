@@ -1,0 +1,57 @@
+html {
+    --background-color: #1c1e26;
+    --text-color: #e5e5e5;
+    --text-alt-color: #b7b7b7;
+    --highlight-color: #6BE4E6;
+    --highlight-alt-color: #51aaac;
+    --font-size: 16px;
+
+    font-size: var(--font-size);
+    font-family: Consolas, Menlo, "Ubuntu Mono", monospace;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+a {
+    color: var(--highlight-color);
+    text-decoration: none;
+    padding: 1px;
+}
+
+a:hover {
+    color: var(--text-color);
+    background-color: var(--highlight-alt-color);
+    border-radius: 2px;
+}
+
+a:active {
+    color: var(--highlight-color)
+}
+
+hr {
+    color: var(--text-alt-color);
+}
+
+h1 {
+    color: #b7b7b7
+}
+
+pre {
+    border-radius: 4px;
+    overflow: scroll;
+    padding: 1rem;
+    width: max-content;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+}
+
+p, li {
+    line-height: 1.4;
+}
+
+.page_title {
+    color: var(--text-color);
+}
+
