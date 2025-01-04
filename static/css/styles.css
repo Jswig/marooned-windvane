@@ -5,8 +5,10 @@ html {
     --text-color: #e5e5e5;
     --background-text-color: #b7b7b7; 
     --toplevel-margin: 2rem;
-    --link-color: #6BE4E6 ;
-    --font-size: 11px
+    --button-color: #6BE4E6;
+    --button-highlight-color: #51aaac;
+    --font-size: 15px;
+    --border-radius: 2px;
 
     font-size: var(--font-size);
     font-family: Consolas, Menlo, "Ubuntu Mono", monospace;
@@ -15,11 +17,19 @@ html {
 }
 
 a {
-    color: var(--link-color);
+    color: var(--button-color);
+    text-decoration: none;
+    padding: 2px;
+}
+
+a:hover {
+    color: var(--text-color);
+    background-color: var(--button-highlight-color);
+    border-radius: var(--border-radius);
 }
 
 a:active {
-    color: var(--link-color)
+    color: var(--button-color)
 }
 
 h1 {
