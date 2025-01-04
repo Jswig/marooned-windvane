@@ -13,3 +13,7 @@ title: "Contact"
 [github](https://github.com/Jswig)
 
 [linkedin](https://www.linkedin.com/in/anders-poirel-732595160/)
+
+### 📌 location
+
+Oakland, CA
