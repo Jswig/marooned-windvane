@@ -2,7 +2,7 @@
 title: "blogroll"
 ---
 
-These are blogs I visit and refer others to on a a regular basis - give these awesome
+Here are blogs I visit and refer others to on a a regular basis - give these awesome
 writers a look! Presence here is not an endorsement of every single viewpoint espoused
 in the following etc etc.
 
