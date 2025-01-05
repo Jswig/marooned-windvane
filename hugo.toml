@@ -16,8 +16,8 @@ title = 'Anders Poirel'
     url = "/blogroll"
     weight = 3
   [[menu.main]]
-    name = "resume"
-    url = "/resume/"
+    name = "cv"
+    url = "/cv/"
     weight = 4
   [[menu.main]]
     name = "contact"

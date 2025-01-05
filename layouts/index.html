@@ -5,9 +5,9 @@
 <h2>recent writing</h2>
 
 {{ range first 5 (where .Site.RegularPages.ByPublishDate.Reverse "Type" "writing" ) }}
-<p>
-  {{ partial "list-item.html" . }}
-</p>
+<div>
+  <p>{{ partial "list-item.html" . }}</p>
+</div>
 {{ end }}
 
 {{ end }}
