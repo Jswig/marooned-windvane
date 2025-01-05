@@ -6,7 +6,7 @@ These are blogs I visit and refer others to on a a regular basis - give these aw
 writers a look! Presence here is not an endorsement of every single viewpoint espoused
 in the following etc etc.
 
-# software engineering
+## software engineering
 
 - [Armin Ronacher](https://lucumr.pocoo.org/)
 - [Bob Nystrom](https://journal.stuffwithstuff.com)
@@ -23,7 +23,7 @@ in the following etc etc.
 - [Tom MacWright](https://macwright.com/)
 - [Write More Tests](https://writemoretests.com/2012/02/estimating-like-an-adult-what-to-steal-from-agile)
 
-# mathematics, statistics & machine learning
+## mathematics, statistics & machine learning
 
 - [Chris Colah](https://colah.github.io/)
 - [Cosma's home page](http://bactra.org/)
@@ -33,7 +33,7 @@ in the following etc etc.
 - [Nick Higham](https://nhigham.com/blog/)
 - [Xi'an's](https://xianblog.wordpress.com/page/2/)
 
-# other
+## other
 
 - [Adam Tooze](https://adamtooze.com/blog/)
 - [Bits About Money](https://www.bitsaboutmoney.com/)
