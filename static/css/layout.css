@@ -1,6 +1,17 @@
-#page-body {
-    --toplevel-margin: 2rem;
+/* trim margins on small screens */
+@media screen and (max-width: 480px) {
+    #page-body {
+        --toplevel-margin: 1rem;
+    }
+}
 
+@media screen and (min-width: 480px) {
+    #page-body {
+        --toplevel-margin: 2rem
+    }
+}
+
+#page-body {
     display: flex;
     flex-direction: column;
     margin: var(--toplevel-margin);

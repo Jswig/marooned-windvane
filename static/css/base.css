@@ -1,15 +1,23 @@
 html {
     --background-color: #1c1e26;
+    --border-radius: 2px;
     --highlight-alt-color: #51aaac;
     --highlight-color: #6BE4E6;
     --font-size: 16px;
     --text-alt-color: #b7b7b7;
+    --text-alt-color-2: #a8a8a8;
+    --text-alt-color-3: #9b9b9b;
     --text-color: #e5e5e5;
 
+    background-color: var(--background-color);
+    box-sizing: border-box;
     color: var(--text-color);
     font-size: var(--font-size);
     font-family: Consolas, Menlo, "Ubuntu Mono", monospace;
-    background-color: var(--background-color);
+    line-height: 1.6;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -21,7 +29,7 @@ a {
 a:hover {
     color: var(--text-color);
     background-color: var(--highlight-alt-color);
-    border-radius: 2px;
+    border-radius: var(--border-radius);
 }
 
 a:active {
@@ -32,29 +40,22 @@ hr {
     color: var(--text-alt-color);
 }
 
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+}
+
 h1 {
     color: var(--text-alt-color)
 }
 
 h2 {
-    color: var(--text-color)
+    color: var(--text-alt-color-2)
 }
 
 h3 {
-    color: #8e8e8e
+    color: var(--text-alt-color-3)
 }
 
-h4 {
-    color: #828282
-}
-
-h5 {
-    color: #787878
-}
-
-h6 {
-    color: #696969;
-}
 
 h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
@@ -65,10 +66,11 @@ p, li {
 }
 
 pre {
-    border-radius: 4px;
+    border-radius: var(--border-radius);
     padding: 1rem;
 }
 
 .page_title {
     color: var(--text-color);
+    margin-top: 0;
 }
