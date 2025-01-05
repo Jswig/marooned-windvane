@@ -1,5 +1,5 @@
 ---
-title: "resume"
+title: "cv"
 ---
 
 # work experience

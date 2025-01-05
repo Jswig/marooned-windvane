@@ -33,7 +33,27 @@ hr {
 }
 
 h1 {
-    color: #b7b7b7
+    color: var(--text-alt-color)
+}
+
+h2 {
+    color: var(--text-color)
+}
+
+h3 {
+    color: #8e8e8e
+}
+
+h4 {
+    color: #828282
+}
+
+h5 {
+    color: #787878
+}
+
+h6 {
+    color: #696969;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -52,4 +72,3 @@ pre {
 .page_title {
     color: var(--text-color);
 }
-

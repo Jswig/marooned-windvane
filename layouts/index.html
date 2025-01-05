@@ -1,13 +1,13 @@
 {{ define "main" }}
 
-<h1>{{ .Site.Title }}</h1>
+<h1 class="page_title">Anders Poirel's blog</h1>
 
 <h2>recent writing</h2>
 
 {{ range first 5 (where .Site.RegularPages.ByPublishDate.Reverse "Type" "writing" ) }}
-<p>
-  {{ partial "list-item.html" . }}
-</p>
+<div>
+  <p>{{ partial "list-item.html" . }}</p>
+</div>
 {{ end }}
 
 {{ end }}
