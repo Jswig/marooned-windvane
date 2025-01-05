@@ -2,7 +2,7 @@
 title: "cv"
 ---
 
-# work experience
+## work experience
 
 **data scientist**, [Joby Aviation](https://www.jobyaviation.com/) *(Dec. 2021 - present)*
 
@@ -18,7 +18,7 @@ title: "cv"
 
 **data scientist intern**, [Startup Genome](https://startupgenome.com/) *(Apr. 2020 - Jun. 2020)*
 
-# volunteer experience
+## volunteer experience
 
 **officer, president**, [Data Science at UCSC](https://www.datasciencesc.netlify.app) *(Jan. 2019 - Dec. 2020)*
 
@@ -27,7 +27,7 @@ lectures on statistical learning & programming.
 Led team to top 5% scores in several machine learning competitions on
 [Kaggle](https://www.kaggle.com/) and [Driven Data](https://www.drivendata.org/).
 
-# education
+## education
 
 **University of California, Santa Cruz** *(2017 - 2021)*
 
