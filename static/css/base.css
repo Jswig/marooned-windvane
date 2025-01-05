@@ -37,7 +37,7 @@ h1 {
 }
 
 h2 {
-    color: #9e9d9d
+    color: var(--text-color)
 }
 
 h3 {
@@ -71,8 +71,4 @@ pre {
 
 .page_title {
     color: var(--text-color);
-}
-
-.summary {
-    color: var(--text-alt-color);
 }
