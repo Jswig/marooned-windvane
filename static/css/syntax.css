@@ -1,5 +1,6 @@
 /* adapted from code generated using: hugo gen chromastyles --style=swapoff */
 
+/* prevent inline code styling from interfering */
 .highlight code {color: unset; font-weight: unset;}
 /* Background */ .bg { color:#e5e5e5;background-color:#242630; }
 /* PreWrapper */ .chroma { color:#e5e5e5;background-color:#242630; }
@@ -42,7 +43,7 @@
 /* NameVariableInstance */ .chroma .vi {  }
 /* NameVariableMagic */ .chroma .vm {  }
 /* Literal */ .chroma .l {  }
-/* LiteralDate */ .chroma .ld { color:#ff0;font-weight:bold }
+/* LiteralDate */ .chroma .ld { color:var(--emphasis-color);font-weight:bold }
 /* LiteralString */ .chroma .s { color:var(--highlight-color);font-weight:bold }
 /* LiteralStringAffix */ .chroma .sa { color:var(--highlight-color);font-weight:bold }
 /* LiteralStringBacktick */ .chroma .sb { color:var(--highlight-color);font-weight:bold }
@@ -57,13 +58,13 @@
 /* LiteralStringRegex */ .chroma .sr { color:var(--highlight-color);font-weight:bold }
 /* LiteralStringSingle */ .chroma .s1 { color:var(--highlight-color);font-weight:bold }
 /* LiteralStringSymbol */ .chroma .ss { color:var(--highlight-color);font-weight:bold }
-/* LiteralNumber */ .chroma .m { color:#ff0;font-weight:bold }
-/* LiteralNumberBin */ .chroma .mb { color:#ff0;font-weight:bold }
-/* LiteralNumberFloat */ .chroma .mf { color:#ff0;font-weight:bold }
-/* LiteralNumberHex */ .chroma .mh { color:#ff0;font-weight:bold }
-/* LiteralNumberInteger */ .chroma .mi { color:#ff0;font-weight:bold }
-/* LiteralNumberIntegerLong */ .chroma .il { color:#ff0;font-weight:bold }
-/* LiteralNumberOct */ .chroma .mo { color:#ff0;font-weight:bold }
+/* LiteralNumber */ .chroma .m { color:var(--emphasis-color);font-weight:bold }
+/* LiteralNumberBin */ .chroma .mb { color:var(--emphasis-color);font-weight:bold }
+/* LiteralNumberFloat */ .chroma .mf { color:var(--emphasis-color);font-weight:bold }
+/* LiteralNumberHex */ .chroma .mh { color:var(--emphasis-color);font-weight:bold }
+/* LiteralNumberInteger */ .chroma .mi { color:var(--emphasis-color);font-weight:bold }
+/* LiteralNumberIntegerLong */ .chroma .il { color:var(--emphasis-color);font-weight:bold }
+/* LiteralNumberOct */ .chroma .mo { color:var(--emphasis-color);font-weight:bold }
 /* Operator */ .chroma .o {  }
 /* OperatorWord */ .chroma .ow {  }
 /* Punctuation */ .chroma .p {  }

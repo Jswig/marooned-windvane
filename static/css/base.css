@@ -1,8 +1,10 @@
 html {
     --background-color: #1c1e26;
+    --background-alt-color: #242630;
     --border-radius: 2px;
     --highlight-alt-color: #51aaac;
-    --highlight-color: #6BE4E6;
+    --highlight-color: #65d7d9;
+    --emphasis-color: #dc7279;
     --font-size: 16px;
     --text-alt-color: #b7b7b7;
     --text-alt-color-2: #a8a8a8;

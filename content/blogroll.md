@@ -3,8 +3,9 @@ title: "blogroll"
 ---
 
 Here are blogs I visit and refer others to on a a regular basis - give these awesome
-writers a look! Presence here is not an endorsement of every single viewpoint espoused
-in the following etc etc.
+writers a look!
+
+Links are not endorsements of every single viewpoint espoused therein etc etc.
 
 ## software engineering
 
@@ -30,6 +31,7 @@ in the following etc etc.
 - [Entropic Thoughts](https://entropicthoughts.com/index)
 - [Gregory Gundersen](https://gregorygundersen.com/blog/)
 - [Julia Silge](https://juliasilge.com/)
+- [Linear Layer](https://linearlayer.substack.com/s)
 - [Nick Higham](https://nhigham.com/blog/)
 - [Xi'an's](https://xianblog.wordpress.com/page/2/)
 
