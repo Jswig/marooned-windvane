@@ -57,7 +57,7 @@ the column's name, so we can get all the column names like this:
 column_names = [c[0] for c in cursor.description]
 ```
 
-Putting all of this together, given a connection and a query, we can run the
+Putting everything together, given a connection and a query, we can run the
 query and unpack its result into the same format as (2):
 ```python
 def execute_query(connection, query):
