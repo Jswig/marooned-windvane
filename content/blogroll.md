@@ -3,8 +3,9 @@ title: "blogroll"
 ---
 
 Here are blogs I visit and refer others to on a a regular basis - give these awesome
-writers a look! Presence here is not an endorsement of every single viewpoint espoused
-in the following etc etc.
+writers a look!
+
+Links are not endorsements of every single viewpoint espoused therein etc etc.
 
 ## software engineering
 

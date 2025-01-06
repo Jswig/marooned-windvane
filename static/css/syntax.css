@@ -1,5 +1,6 @@
 /* adapted from code generated using: hugo gen chromastyles --style=swapoff */
 
+/* prevent inline code styling from interfering */
 .highlight code {color: unset; font-weight: unset;}
 /* Background */ .bg { color:#e5e5e5;background-color:#242630; }
 /* PreWrapper */ .chroma { color:#e5e5e5;background-color:#242630; }
