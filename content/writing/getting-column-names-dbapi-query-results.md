@@ -5,9 +5,9 @@ tags: []
 draft: false
 ---
 
-The [PEP-249 Python Database API Specification](https://peps.python.org/pep-0249/)
-(DBAPI) defines a standard interface for database access that's implemented by libraries
-such as [psycopg](https://www.psycopg.org/docs/) and
+[PEP-249 - Python Database API Specification](https://peps.python.org/pep-0249/)
+(DBAPI) defines a standard interface for database access in Python that's implemented 
+by libraries such as [psycopg](https://www.psycopg.org/docs/) and
 [PyMySQL](https://pymysql.readthedocs.io/en/latest/).
 
 One common task with DBAPI libraries I see new users bounce off is identifying
