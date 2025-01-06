@@ -36,6 +36,11 @@ a:active {
     color: var(--highlight-color)
 }
 
+code {
+    color: var(--text-alt-color-3);
+    font-weight: bold;
+}
+
 hr {
     color: var(--text-alt-color);
 }
@@ -70,6 +75,12 @@ pre {
     padding: 1rem;
 }
 
-.page_title {
+.page-title {
     margin-top: 0;
+}
+
+.page-title-date {
+    color: var(--text-alt-color);
+    font-size: var(--font-size);
+    font-weight: normal;
 }

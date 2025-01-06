@@ -1,7 +1,6 @@
 {{ define "main" }}
 <article>
-    <h1 class="page_title">{{ .Title }}</h1>
-    {{ partial "date.html" . }}
+    <h1 class="page-title">{{ .Title }} <span class="page-title-date">{{ partial "date.html" . }}</span></h1>
     {{ .Content }}
 </article>
 {{ end }}
