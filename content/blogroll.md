@@ -11,6 +11,7 @@ Links are not endorsements of every single viewpoint espoused therein etc etc.
 
 - [Armin Ronacher](https://lucumr.pocoo.org/)
 - [Bob Nystrom](https://journal.stuffwithstuff.com)
+- [Brandur](https://brandur.org/)
 - [Cal Peterson](https://calpaterson.com/)
 - [Charity Majors](https://charity.wtf/)
 - [Dan Luu](https://danluu.com/)
@@ -34,9 +35,3 @@ Links are not endorsements of every single viewpoint espoused therein etc etc.
 - [Linear Layer](https://linearlayer.substack.com/s)
 - [Nick Higham](https://nhigham.com/blog/)
 - [Xi'an's](https://xianblog.wordpress.com/page/2/)
-
-## other
-
-- [Adam Tooze](https://adamtooze.com/blog/)
-- [Bits About Money](https://www.bitsaboutmoney.com/)
-- [Construction Physics](https://www.construction-physics.com/)
